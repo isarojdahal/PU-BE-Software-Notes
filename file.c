@@ -1,5 +1,8 @@
 // Program to add two distances (feet-inch)
 #include <stdio.h>
+#include <conio.h>
+
+
 struct Distance
 {
     int feet;
