@@ -27,7 +27,7 @@ int main()
     // adding inches
     sum.inch = dist1.inch + dist2.inch;
 
-    // changing to feet if inch is greater than 12
+
     while (sum.inch >= 12) 
     {
         ++sum.feet;
