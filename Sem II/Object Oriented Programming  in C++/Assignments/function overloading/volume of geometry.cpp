@@ -2,6 +2,8 @@
 
 using namespace std;
 
+#define PI 3.14
+
 double volume(double length) //Volume of Cube
 {
     return length * length * length;
@@ -9,7 +11,7 @@ double volume(double length) //Volume of Cube
 
 double volume(double radius, double height) //Volume of Cylinder
 {
-    return 3.14 * radius * radius * height;
+    return PI * radius * radius * height;
 }
 
 double volume(double length, double breadth, double height) // Volume of Rectangular Box
