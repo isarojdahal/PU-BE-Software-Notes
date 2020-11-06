@@ -11,7 +11,7 @@ class Distance
 {
 
 private:
-    float feet, inches;
+    int feet, inches;
 
 public:
     void setData()
@@ -26,8 +26,9 @@ public:
 
 void addData(Distance d1, Distance d2)
 {
-
-    cout << "Sum :" << (d1.feet + d2.feet) << " Foot and " << (d1.inches + d2.inches) << " Inches ";
+    int totalFeet = d1.feet + d2.feet + (d1.inches % 12) + (d2.inches % 12);
+    int totalInches = (d1.inches / 12) + (d2.inches / 12.0);
+    cout << "Sum :" << totalFeet << " Foot and " << totalInches << " Inches ";
 }
 
 int main()

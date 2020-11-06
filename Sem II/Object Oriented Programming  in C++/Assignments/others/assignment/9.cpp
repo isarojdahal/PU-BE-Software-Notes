@@ -37,10 +37,8 @@ public:
 
 void cmpHeight(Mountain m1, Mountain m2)
 {
-    //display all details.
-    (m1.height > m2.height) ? cout << m1.name << " has greatest height" : cout << m2.name << " has greatest height";
+    (m1.height > m2.height) ? m1.displayInfo() : cout << m2.displayInfo();
 }
-
 int main()
 {
     Mountain m1, m2;
