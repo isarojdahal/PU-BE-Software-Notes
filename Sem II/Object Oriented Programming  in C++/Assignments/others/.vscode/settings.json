@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "*.puml": "java",
+        "iostream": "cpp"
+    }
+}
