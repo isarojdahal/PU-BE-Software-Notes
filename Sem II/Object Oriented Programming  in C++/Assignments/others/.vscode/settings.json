@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "*.puml": "java",
+        "*.blade.php": "html",
         "iostream": "cpp",
         "array": "cpp",
         "atomic": "cpp",
@@ -44,6 +45,7 @@
         "stdexcept": "cpp",
         "streambuf": "cpp",
         "typeinfo": "cpp",
-        "bit": "cpp"
+        "bit": "cpp",
+        "cstring": "cpp"
     }
 }
