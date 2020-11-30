@@ -1,0 +1,9 @@
+#formDiv {
+  float: left;
+  width: 50%;
+}
+
+#summaryDiv {
+  float: right;
+  width: 50%;
+}
