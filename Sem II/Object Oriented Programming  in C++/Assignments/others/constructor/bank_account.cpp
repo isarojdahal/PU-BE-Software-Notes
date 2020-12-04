@@ -25,10 +25,11 @@ public:
 
     Bank()
     {
+        balanceAmount = 0;
+        accountNumber = 0;
     }
     int openAccount(char name[20])
     {
-        balanceAmount = 0;
         strcpy(accountHolderName, name);
         int max = 100; //set the upper bound to generate the random number
         accountNumber = (rand() % max);
@@ -67,65 +68,54 @@ public:
         cout << "Account Number : " << accountNumber << endl;
         cout << "Total Balance : " << balanceAmount << endl;
     }
-
-    void displayMenu()
-    {
-
-        cout << endl
-             << "1. Open an Account" << endl;
-        cout << "2. Deposit Money" << endl;
-        cout << "3. Withdraw Money" << endl;
-        cout << "4. Show Account Info" << endl;
-        cout << "5. Exit " << endl;
-    }
 };
 
 int main()
 {
     int input, money;
+    Bank bank[10];
 
-    Bank bank;
+    //Account Creation
 
-    while (1)
+    char name[20];
+    for (int i = 0; i <= 9; i++)
     {
-        bank.displayMenu();
         cout << endl
-             << "Input : ";
-        cin >> input;
-        cout << endl;
+             << "Enter Account Holder Name : ";
+        cin >> name;
+        bank[i].openAccount(name);
+    }
+    cout << endl
+         << "Deposit money : ";
 
-        switch (input)
-        {
+    for (int i = 0; i <= 9; i++)
+    {
 
-        case 1:
-            char name[20];
-            cout << endl
-                 << "Enter Account Holder Name : ";
-            cin >> name;
-            bank.openAccount(name);
-            break;
+        cout << endl
+             << "Customer No : " << (i + 1) << endl;
+        cout << endl
+             << "Amount you want to deposit : ";
+        cin >> money;
+        bank[i].depositMoney(money);
+    }
 
-        case 2:
-            cout << endl
-                 << "Amount you want to deposit : ";
-            cin >> money;
-            bank.depositMoney(money);
-            break;
+    cout << endl
+         << "Withdraw Money : " << endl;
 
-        case 3:
-            cout << endl
-                 << "Amount you want to withdraw : ";
-            cin >> money;
-            bank.withdrawMoney(money);
-            break;
+    for (int i = 0; i <= 9; i++)
+    {
 
-        case 4:
-            bank.accountInformation();
-            break;
+        cout << endl
+             << "For Customer No : " << (i + 1);
+        cout << endl
+             << "Amount you want to withdraw : ";
+        cin >> money;
+        bank[i].withdrawMoney(money);
+    }
 
-        case 5:
-            exit(1);
-        }
+    for (int i = 0; i <= 9; i++)
+    {
+        bank[i].accountInformation();
     }
 
     return 1;

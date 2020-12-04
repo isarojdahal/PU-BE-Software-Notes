@@ -18,7 +18,7 @@ public:
         height = 0;
     }
 
-    Mountain(char n[15], char l[15], int h)
+    Mountain(char n[], char l[], int h)
     {
         strcpy(name, n);
         strcpy(location, l);
