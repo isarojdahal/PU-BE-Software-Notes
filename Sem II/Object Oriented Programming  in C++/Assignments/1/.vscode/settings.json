@@ -2,6 +2,7 @@
     "files.associations": {
         "*.puml": "java",
         "*.blade.php": "html",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "ostream": "cpp"
     }
 }
