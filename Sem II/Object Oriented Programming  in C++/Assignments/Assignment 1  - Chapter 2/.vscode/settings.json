@@ -1,8 +1,0 @@
-{
-    "files.associations": {
-        "*.puml": "java",
-        "ostream": "cpp",
-        "iostream": "cpp"
-    },
-    "C_Cpp.errorSquiggles": "Disabled"
-}

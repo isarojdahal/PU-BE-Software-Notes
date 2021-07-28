@@ -1,7 +1,0 @@
-{
-    "files.associations": {
-        "*.puml": "java",
-        "*.blade.php": "html",
-        "ostream": "cpp"
-    }
-}
