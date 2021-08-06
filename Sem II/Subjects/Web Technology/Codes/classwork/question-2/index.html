@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <div id="formDiv">
+      <form >
+        <h3>IndraChowk Lassi Shop</h3>
+
+        <table>
+          <tr>
+            <td>Customer Name</td>
+            <td><input type="text" id="customerName" /></td>
+          </tr>
+          <tr>
+            <td>Customer Address</td>
+            <td><input type="text" id="customerAddress" /></td>
+          </tr>
+          <tr>
+            <td>Customer Phone</td>
+            <td><input type="text" id="customerPhone" /></td>
+          </tr>
+        </table>
+
+        <br />
+        <table border="1">
+          <thead>
+            <th>Lassi Type</th>
+            <th>Price</th>
+            <th>Qty</th>
+          </thead>
+          <tr>
+            <td>Plain Lassi</td>
+            <td>Nrs.60</td>
+            <td><input type="text" id="plainLassiQty" /></td>
+          </tr>
+
+          <tr>
+            <td>Banana Lassi</td>
+            <td>Nrs.80</td>
+            <td><input type="text" id="bananaLassiQty" /></td>
+          </tr>
+          <tr>
+            <td>Special Lassi</td>
+            <td>Nrs.100</td>
+            <td><input type="text" id="specialLassiQty" /></td>
+          </tr>
+        </table>
+        <br />
+        <h4>Payment Method</h4>
+        <input type="checkbox" class="esewa-payment" name="payment" /> Esewa
+        <input type="checkbox" class="cod-payment" name="payment" checked /> Cash On Delivery
+        <br /><br />
+        <input type="button" value="Submit Order" onclick="validateData()" />
+        <input type="reset" value="Clear Order Form" />
+
+        <br/><br/>
+        <div id="statusDiv">
+        </div>
+    </form>
+      </div>
+
+      <div id="summaryDiv">
+        <h3>Order Summary:</h3>
+        <div id="order-details"></div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="validate.js"></script>
+</html>

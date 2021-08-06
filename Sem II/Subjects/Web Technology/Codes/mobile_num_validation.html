@@ -1,0 +1,27 @@
+<!-- Submitted By 191725-->>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      var data = prompt("Enter Phone number in format (00977-9811111111)");
+      var position = data.search(/^\b[0-9]{3,5}-\98[0-9]{8}$/);
+
+      if (position === 0) {
+        //means phone number is valid; and we have to check whether its nepali number or foreign.
+        if (data.match(/\b00977/) || data.match(/\b977/)) {
+          document.write("You are Nepali");
+        } else {
+          document.write("Hello Foreigner");
+        }
+      } else {
+        document.write("invalid phone number");
+      }
+    </script>
+  </head>
+
+  <body></body>
+</html>
