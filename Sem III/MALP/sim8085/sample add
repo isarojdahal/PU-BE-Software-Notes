@@ -1,0 +1,11 @@
+mvi a,85h
+mvi b,85h
+mvi c,00h
+add b
+jnc loop
+inr c
+loop:
+sta 9000h
+mov a,c
+sta 9001
+hlt

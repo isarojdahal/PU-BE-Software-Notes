@@ -1,0 +1,17 @@
+LXI H,9000H
+LXI D,9100H
+MVI C,0AH
+level2:
+	MOV A,M
+	ANI 28H
+	CPI 20H
+	JZ level1
+	MVI M,00h
+level1:
+	MOV A,M
+	STAX D
+	INX H
+	INX D
+	DCR C
+	JNZ level2
+	HLT
